@@ -10,6 +10,8 @@ DATABASE_URL = os.environ.get('DATABASE_URL', 'postgresql://wazimap_np:wazimap_n
 DATABASES['default'] = dj_database_url.parse(DATABASE_URL)
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
+USE_TZ = False
+
 SCHEME = 'http' if (os.environ.get('APP_ENV', 'dev') == 'dev') else 'https'
 URL = SCHEME+'://'+'nepalmap.org'
 
